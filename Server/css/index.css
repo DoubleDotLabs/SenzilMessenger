@@ -32,11 +32,11 @@ body {
     position: fixed;
 }
 
-#emit_data {
-    width: 94%
+#broadcast_data {
+    width: 90%
 }
 
-#submitecho {
-    width: 5%;
+#submitmessage {
+    width: 9.5%;
     float: right;
 }

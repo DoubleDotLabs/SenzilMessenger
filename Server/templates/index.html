@@ -18,11 +18,6 @@
         </form>
     </div>
     <h1>Move stuff from here</h1>
-    <form id="broadcast" method="POST" action='#'>
-        <input type="text" name="broadcast_data" id="broadcast_data" placeholder="Message">
-        <input type="submit" value="Broadcast">
-    </form>
-    
     <form id="leave" method="POST" action='#'>
         <input type="text" name="leave_room" id="leave_room" placeholder="Room Name">
         <input type="submit" value="Leave Room">
@@ -32,8 +27,8 @@
     <div><p id="log"></p></div>
     <div id="bottomarea">
         <form id="emit" method="POST" action='#'>
-            <input type="text" name="emit_data" id="emit_data" placeholder="Message">
-            <input type="submit" value="Echo" id="submitecho">
+            <input type="text" name="broadcast_data" id="broadcast_data" placeholder="Message">
+            <input type="submit" value="Broadcast" id="submitmessage">
         </form>
     </div>
 </body>
