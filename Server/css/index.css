@@ -1,0 +1,42 @@
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+#headarea {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: lightblue;
+    top: 0;
+    width: 100%;
+    display: inline-block;
+}
+
+#headarea form {
+        display: inline-block;
+}
+
+#disconnect {
+    float: right;
+}
+
+#bottomarea {
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+
+#emit_data {
+    width: 94%
+}
+
+#submitecho {
+    width: 5%;
+    float: right;
+}
