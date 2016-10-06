@@ -4,7 +4,7 @@
 async_mode = None
 
 import time
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 import socketio
 
 sio = socketio.Server(logger=True, async_mode=async_mode)
@@ -24,12 +24,22 @@ def background_thread():
                  namespace='/')
 
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
     global thread
     if thread is None:
         thread = sio.start_background_task(background_thread)
     return render_template('index.html')
+
+
+@app.route('/js/<path:path>')
+def send_js(path):
+    return send_from_directory('js', path)
+
+
+@app.route('/css/<path:path>')
+def send_css(path):
+    return send_from_directory('css', path)
 
 
 @sio.on('my event', namespace='/')
